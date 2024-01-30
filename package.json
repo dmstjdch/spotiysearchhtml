@@ -1,0 +1,14 @@
+{
+  "name": "music-search",
+  "version": "1.0.0",
+  "description": "A simple music search app using Spotify API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0"
+  }
+}

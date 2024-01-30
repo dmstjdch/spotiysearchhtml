@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음악 검색</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>음악 검색</h1>
+        <input type="text" id="searchInput" placeholder="음악 제목을 입력하세요." onkeypress="handleKeyPress(event)">
+        <button onclick="searchSpotify()">검색</button>
+
+        <!-- 결과를 표시할 컨테이너 -->
+        <div id="resultContainer" class="hidden">
+            <!-- 첫 번째 검색 결과 -->
+            <img id="albumCover" alt="Album Cover">
+            <div id="songInfo">
+                <h2 id="songTitle"></h2>
+                <p id="artistName"></p>
+            </div>
+            <audio id="audioPlayer" controls></audio>
+            <p id="warningText">스포티파이 API를 이용했습니다. 미리듣기 청취 시 음량에 주의하세요.</p>
+
+            <!-- 유사 검색 결과 소제목 및 컨테이너 -->
+            <h3>유사 검색 결과입니다</h3>
+            <div id="similarResultsContainer" class="resultContainer"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
